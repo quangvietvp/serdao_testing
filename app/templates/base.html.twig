@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                {% if pageTitle is defined %}
+                    {{ pageTitle }}
+                {% else %}
+                    Default Title
+                {% endif %}
+            {% endblock %}
+        </title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            <style>
+                html {
+                    font-family: Arial, Helvetica, sans-serif;
+                    width: 60%;
+                    margin: auto;
+                }
+
+                h1 {
+                    color: #048186;
+                }
+
+                input[type=text], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+
+                input[type=submit] {
+                    width: 100%;
+                    background-color: #04a4aa;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                input[type=submit]:hover {
+                    background-color: #04a4aa;
+                }
+
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                table td, table th {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+
+                table tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                table tr:hover {
+                    background-color: #ddd;
+                }
+
+                table th {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    text-align: left;
+                    background-color: #04a4aa;
+                    color: white;
+                }
+            </style>
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
